@@ -1,2 +1,4 @@
-# my-first-test
-First test repository
+# my-first-domain
+Please, see my first domain at:
+http://my-class.duckdns.org
+

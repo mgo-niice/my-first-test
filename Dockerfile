@@ -55,7 +55,7 @@ RUN rm -vrf /var/cache/apk/*
 #RUN pip install flask
 
 EXPOSE 2222
-EXPOSE 33066
+# EXPOSE 33066
 
 # docker build -f ubuntu.Dockerfile -t my-ubuntu .
 # docker run -d -p 2222:22 my-ubuntu

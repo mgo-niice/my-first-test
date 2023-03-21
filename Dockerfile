@@ -16,7 +16,7 @@ RUN apk add mysql mysql-client util-linux openrc rsyslog rsyslog-openrc
 RUN apk add openrc-dev busybox-mdev-openrc mdevd-openrc
 RUN apk add net-tools alpine-conf perl-sys-hostname-long s6-linux-utils
 
-RUN openrc
+# RUN openrc
 
 RUN rc-update add rsyslog default\
   && mkdir /run/openrc\

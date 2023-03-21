@@ -9,22 +9,22 @@ ENV PASSWORD_ACCESS=true
 ENV USER_PASSWORD=mogenius
 ENV USER_NAME=mogenius
 
-VOLUME /sys/fs/cgroup
+#VOLUME /sys/fs/cgroup
 
-RUN apk update
-RUN apk add mysql mysql-client util-linux openrc rsyslog rsyslog-openrc
-RUN apk add openrc-dev busybox-mdev-openrc mdevd-openrc
-RUN apk add net-tools alpine-conf perl-sys-hostname-long s6-linux-utils
+#RUN apk update
+#RUN apk add mysql mysql-client util-linux openrc rsyslog rsyslog-openrc
+#RUN apk add openrc-dev busybox-mdev-openrc mdevd-openrc
+#RUN apk add net-tools alpine-conf perl-sys-hostname-long s6-linux-utils
 
 # RUN openrc
 
-RUN rc-update add rsyslog default\
-  && mkdir /run/openrc\
-  && touch /run/openrc/softlevel
+#RUN rc-update add rsyslog default\
+#  && mkdir /run/openrc\
+#  && touch /run/openrc/softlevel
 
 
 # REMOVE CACHE ALPINE
-RUN rm -vrf /var/cache/apk/*
+#RUN rm -vrf /var/cache/apk/*
 
 # RUN /etc/init.d/mariadb setup
 
@@ -54,7 +54,7 @@ RUN rm -vrf /var/cache/apk/*
 #RUN apk add py3-pip
 #RUN pip install flask
 
-EXPOSE 2222
+# EXPOSE 2222
 # EXPOSE 33066
 
 # docker build -f ubuntu.Dockerfile -t my-ubuntu .
